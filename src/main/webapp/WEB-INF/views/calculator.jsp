@@ -12,10 +12,14 @@
 <form method="post">
     <h3>Введите выражение:</h3>
     <input type="text" name="input"/>
+    <div class="text-danger">${lengthError}</div>
+    <div class="text-danger">${inputError}</div>
     <button type="submit" class="btn btn-success">Вычислить</button>
-    <h3>Вы ввели выражение: <c:out value="${input}"/> </h3>
-    <h3>Преобразованное выражение(в виде RPN): ${expression}</h3>
-    <h2>Ответ: ${result}</h2>
+    <c:if test="${not empty input}">
+        <h3>Вы ввели выражение: <c:out value="${input}"/> </h3>
+        <h3>Преобразованное выражение(в виде RPN): ${expression}</h3>
+        <h2>Ответ: ${result}</h2>
+    </c:if>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

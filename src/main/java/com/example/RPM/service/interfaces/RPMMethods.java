@@ -7,10 +7,12 @@ public interface RPMMethods {
 
     double counting(String input);
 
-    boolean isDelimeter(char c);
+    boolean isDelimiter(char c);
 
     boolean isOperator(char c);
 
     int getPriority(char s);
+
+    boolean isMathExpression(String input);
 
 }

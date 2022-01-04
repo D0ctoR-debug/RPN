@@ -2,7 +2,7 @@
 <header>
     <nav id="navbarStart" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-xxl">
-            <a class="navbar-brand" href="#Welcome"><h2>RPM</h2></a>
+            <a class="navbar-brand" href="/"><h2>RPM</h2></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

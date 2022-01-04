@@ -1,0 +1,10 @@
+isOperator?;Expected
++;true
+g;false
+-;true
+*;true
+7;false
+/;true
+^;true
+(;true
+);true

@@ -30,6 +30,15 @@ public class PageController {
 
     @PostMapping("/calculator")
     public String calculate(@RequestParam String input, Model model) {
+
+        if (input.length() <= 1) {
+            model.addAttribute("lengthError", "The math expression should have more than 1 symbol");
+            return "calculator";
+        }
+        if (!rpmMethods.isMathExpression(input)) {
+            model.addAttribute("inputError", "The math expression shouldn't have letters");
+            return "calculator";
+        }
         String expression = rpmMethods.getExpression(input);
         double result = rpmMethods.calculate(input);
         model.addAttribute("input", input);
