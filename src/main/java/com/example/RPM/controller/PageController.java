@@ -36,7 +36,7 @@ public class PageController {
             return "calculator";
         }
         if (!rpmMethods.isMathExpression(input)) {
-            model.addAttribute("inputError", "The math expression shouldn't have letters");
+            model.addAttribute("inputError", "The math expression shouldn't have letters and unknown symbols");
             return "calculator";
         }
         String expression = rpmMethods.getExpression(input);
