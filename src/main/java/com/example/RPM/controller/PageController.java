@@ -32,7 +32,7 @@ public class PageController {
     public String calculate(@RequestParam String input, Model model) {
 
         if (input.length() <= 1) {
-            model.addAttribute("lengthError", "The math expression should have more than 1 symbol");
+            model.addAttribute("lengthError", " The math expression should have more than 1 symbol");
             return "calculator";
         }
         if (!rpmMethods.isMathExpression(input)) {
